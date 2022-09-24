@@ -48,15 +48,11 @@ fn generate_pour_over_instructions(coffee_mass: u32) {
 fn main() {
     let matches = cli().get_matches();
 
-    match matches.subcommand() {
-        Some(("brew", sub_matches)) => {
-
-            // Getting the coffee mass
-            let coffee_mass: u32  = *sub_matches.get_one("coffee-mass")
-                .expect("Error reading coffee mass.");
-            
-            generate_pour_over_instructions(coffee_mass);
-        },
-        _ => (),
+    if let Some(("brew", sub_matches)) = matches.subcommand() {
+        // Getting the coffee mass
+        let coffee_mass: u32  = *sub_matches.get_one("coffee-mass")
+            .expect("Error reading coffee mass.");
+        
+        generate_pour_over_instructions(coffee_mass);
     }
 }

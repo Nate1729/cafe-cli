@@ -11,4 +11,9 @@ This tool aims to fix that problem!
 
 # How to use the tool
 Right now the only way to use the tool is compile it yourself; You will need the rust compiler
-installed. Run `cargo build --release` to compile the code in the most optimized way.
+installed. https://github.com/rust-lang/rust has instructions on how to install the rust
+compiler.
+
+# Thank You
+Special thanks to [James Hoffman](https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ) for
+teaching the awesome V60 pour over technique.

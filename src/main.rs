@@ -32,6 +32,6 @@ fn main() {
         let coffee_mass: u32  = *sub_matches.get_one("coffee-mass")
             .expect("Error reading coffee mass.");
         
-        pourover::generate_pour_over_instructions(coffee_mass);
+        pourover::generate_pour_over_instructions(pourover::InputMass::CoffeeMass(coffee_mass));
     }
 }
